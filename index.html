@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title> Google Apps Script Twitter </title>
+        <script src = "script.js"></script>
+        <link rel = "stylesheet" href = "style.css" />
+        <link rel="icon" type="image/x-icon" href="gas.png">
+    </head>
+    <body onload = "showTweets()">
+        <input type = "text" id = "name" value = "your name">
+        <br>
+        <textarea id = "tweet"> your tweet </textarea>
+        <br>
+        <button onclick = "sendTweet()"> Post tweet</button>
+        <br>
+        <h1 id = "conf"> </h1>
+        <span id = "tweets">
+        </span>
+    </body>
+</html>
