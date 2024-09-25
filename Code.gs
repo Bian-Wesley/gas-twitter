@@ -1,4 +1,4 @@
-var sheet = SpreadsheetApp.getActiveSheet();
+var sheet = SpreadsheetApp.getActive().getSheetByName("Sheet1");
 var values = sheet.getDataRange().getValues();
 
 function doPost(e) {
