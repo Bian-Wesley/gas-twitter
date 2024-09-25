@@ -1,3 +1,5 @@
+var url = "https://script.google.com/macros/s/AKfycbxNHviMqqGh0yfnbZRWIGgCZcEDwgxw3rRKGTlUeSn665FlEGhH27wZfGIY11Q2179K/exec";
+
 function genElAppDiv(tag, text, appendTo){
     var el = document.createElement(tag);
     el.innerHTML = text;
@@ -28,7 +30,7 @@ function showTweets(){
     document.getElementById("conf").innerHTML = "Gathering tweets..."
     var getTweets = new XMLHttpRequest();
     getTweets.addEventListener("load", handleShowTweetsResp);
-    getTweets.open("GET", "https://script.google.com/macros/s/AKfycbzdkGVLcXM2yvKTA5-H6Z39EC8UztOFGojRRLwgC-A9Fs3rjFN4x9OLtIdoEw6kKKub/exec");
+    getTweets.open("GET", url);
     getTweets.send();
 }
 
@@ -41,7 +43,7 @@ function sendTweet(){
     //call API efficiently
     var postTweet = new XMLHttpRequest();
     postTweet.addEventListener("load", handlePostTweetResp);
-    postTweet.open("POST", "https://script.google.com/macros/s/AKfycbzdkGVLcXM2yvKTA5-H6Z39EC8UztOFGojRRLwgC-A9Fs3rjFN4x9OLtIdoEw6kKKub/exec");
+    postTweet.open("POST", url);
     var payload = {
         name: name,
         tweet: tweet
